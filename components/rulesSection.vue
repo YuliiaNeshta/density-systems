@@ -42,7 +42,12 @@ export default {
 
 <style lang="scss">
 .rules {
-  padding-bottom: 200px;
+  background-image: url('~@/assets/images/gradient.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 200px 0px;
+  backdrop-filter: blur(28px);
   &__title {
     margin-bottom: 20px;
   }

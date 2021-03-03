@@ -46,27 +46,34 @@ export default {}
 
 <style lang="scss">
 .advantages {
-  padding: 120px 0px;
   &__title {
     margin-bottom: 100px;
   }
 
   &__wrapper {
     display: flex;
+    align-items: center;
   }
 
   &__item {
   }
 }
 .advantages-item {
-  flex: 1 1 33.333%;
+  min-height: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   height: 100%;
   &__img {
     margin-bottom: 30px;
+    max-height: 130px;
     flex: 1 1 auto;
+    img {
+      max-width: 100%;
+      vertical-align: middle;
+      display: inline-block;
+    }
   }
 
   &__title {
@@ -76,10 +83,12 @@ export default {}
     text-align: center;
     color: #000000;
     margin-bottom: 15px;
+    max-width: 370px;
   }
 
   &__text {
     text-align: center;
+    margin-top: auto;
   }
 }
 </style>

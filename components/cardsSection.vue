@@ -49,7 +49,7 @@ export default {}
 
 <style lang="scss">
 .plans {
-  padding-top: 300px;
+  padding-top: 250px;
   padding-bottom: 180px;
 
   &__cards {
@@ -76,7 +76,7 @@ export default {}
   align-items: center;
   margin-right: 30px;
   &--margin {
-    margin-top: 35px;
+    transform: translateY(40px);
   }
   &__image {
     margin-bottom: 30px;

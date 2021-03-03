@@ -75,6 +75,9 @@ export default {}
     display: inline-block;
     margin-right: 15px;
   }
+  &__logo {
+    margin-bottom: 30px;
+  }
   &__btn {
     border: 1px solid #fff;
     color: #fff;
