@@ -71,6 +71,12 @@ export default {
     color: #5056e4;
     align-self: flex-start;
     background-color: #fff;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      border: 1px solid #5056e4;
+      color: #fff;
+      background-color: #5056e4;
+    }
   }
 
   &__img {

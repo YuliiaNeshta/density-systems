@@ -5,13 +5,31 @@
     </div>
     <div class="header__contacts">
       <a href="tel:+380669999999" class="header__tel">+38 (066) 999 99 99</a>
-      <button class="header__btn btn">Консультация</button>
+      <button class="header__btn btn" @click="showModal">Консультация</button>
     </div>
+    <base-modal v-if="isFormPopupVisible" @closePopup="closePopup"></base-modal>
   </header>
 </template>
 
 <script>
-export default {}
+import baseModal from './baseModal'
+
+export default {
+  components: { baseModal },
+  data() {
+    return {
+      isFormPopupVisible: false,
+    }
+  },
+  methods: {
+    showModal() {
+      this.isFormPopupVisible = true
+    },
+    closePopup() {
+      this.isFormPopupVisible = false
+    },
+  },
+}
 </script>
 
 <style lang="scss">

@@ -83,6 +83,11 @@ export default {}
     color: #fff;
     text-align: center;
     align-self: flex-end;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
   }
   &__c {
     text-align: center;
