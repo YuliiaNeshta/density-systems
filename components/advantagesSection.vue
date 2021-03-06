@@ -46,13 +46,24 @@ export default {}
 
 <style lang="scss">
 .advantages {
+  padding: 50px 0px;
+  @media screen and (max-width: 769px) {
+    padding-bottom: 0px;
+  }
   &__title {
     margin-bottom: 100px;
+    @media screen and (max-width: 769px) {
+      margin-bottom: 60px;
+    }
   }
 
   &__wrapper {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 992px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -65,10 +76,23 @@ export default {}
   align-items: center;
   justify-content: flex-end;
   height: 100%;
+  @media screen and (max-width: 992px) {
+    max-width: 450px;
+    margin-bottom: 60px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
   &__img {
     margin-bottom: 30px;
     max-height: 130px;
     flex: 1 1 auto;
+    @media screen and (max-width: 769px) {
+      margin-bottom: 45px;
+    }
+    @media screen and (max-width: 475px) {
+      max-height: 100px;
+    }
     img {
       max-width: 100%;
       vertical-align: middle;
@@ -84,6 +108,9 @@ export default {}
     color: #000000;
     margin-bottom: 15px;
     max-width: 370px;
+    @media screen and (max-width: 769px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__text {

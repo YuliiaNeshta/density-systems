@@ -42,12 +42,16 @@ export default {
 
 <style lang="scss">
 .rules {
-  background-image: url('~@/assets/images/gradient.png');
+  background-image: url('~@/assets/images/bg-slider.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   padding: 200px 0px;
   backdrop-filter: blur(28px);
+  @media screen and (max-width: 769px) {
+    padding: 120px 0px;
+    padding-bottom: 220px;
+  }
   &__title {
     margin-bottom: 20px;
   }
@@ -55,11 +59,19 @@ export default {
   &__descr {
     text-align: center;
     margin-bottom: 90px;
+    @media screen and (max-width: 769px) {
+      margin-bottom: 60px;
+    }
   }
   &__img {
     display: flex;
     position: relative;
     justify-content: center;
+    img {
+      @media screen and (max-width: 769px) {
+        max-width: 300px;
+      }
+    }
   }
   & .img-right,
   .img-left {
@@ -71,6 +83,12 @@ export default {
 
   & .img-right {
     right: 5%;
+    @media screen and (max-width: 769px) {
+      max-width: 180px;
+      right: 47vw;
+      top: auto;
+      bottom: -87%;
+    }
   }
 
   & .img-main {
@@ -79,6 +97,13 @@ export default {
   }
   & .img-left {
     left: 5%;
+
+    @media screen and (max-width: 769px) {
+      top: auto;
+      bottom: -200px;
+      left: 33%;
+      max-width: 180px;
+    }
   }
 }
 </style>

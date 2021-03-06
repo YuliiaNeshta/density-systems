@@ -18,12 +18,14 @@
           <div class="modal-body">
             <slot name="body">
               <form class="modal-form" @submit.prevent="onSubmit">
-                <input type="email" class="modal-form__input" v-model="email" />
+                <label for="" class="modal-label">Номер телефона</label>
                 <input
                   type="number"
                   class="modal-form__input"
                   v-model="mobile"
                 />
+                <label for="" class="modal-label">E-mail</label>
+                <input type="email" class="modal-form__input" v-model="email" />
                 <button class="modal-button btn">Отправить</button>
               </form>
             </slot>
@@ -75,8 +77,21 @@ export default {
   opacity: 0;
 }
 
+.modal-label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  margin-bottom: 6px;
+  display: block;
+  align-self: flex-start;
+}
+
 .modal-logo {
   margin-bottom: 30px;
+  @media screen and (max-width: 779px) {
+    display: none;
+  }
 }
 
 .modal-text {
@@ -85,6 +100,10 @@ export default {
   line-height: 19px;
   text-align: center;
   color: #ffffff;
+  @media screen and (max-width: 779px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .header {
@@ -112,6 +131,10 @@ export default {
     height: 60px;
     max-width: 417px;
     width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333;
 
     &:focus {
       outline: none;
@@ -133,6 +156,11 @@ export default {
   text-align: center;
   color: #ffffff;
   font-weight: 700;
+  @media screen and (max-width: 769px) {
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 20px;
+  }
 }
 
 .modal-button {
@@ -179,6 +207,10 @@ export default {
   //   top: 25px;
   //   right: 25px;
   // }
+  @media screen and (max-width: 769px) {
+    top: 10px;
+    right: 10px;
+  }
 }
 
 .modal-wrapper {
@@ -186,6 +218,10 @@ export default {
   flex-direction: column;
   align-items: center;
   transition: all 0.3s ease 0s;
+  @media screen and (max-width: 769px) {
+    margin: 10px;
+    overflow-y: scroll;
+  }
 }
 
 .modal-container {
@@ -194,8 +230,6 @@ export default {
   padding: 40px 115px;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(40px);
-  /* Note: backdrop-filter has minimal browser support */
-
   border-radius: 20px;
   transition: all 0.3s ease;
   position: relative;
@@ -206,6 +240,11 @@ export default {
   //   width: 100vw;
   //   padding: 60px 10px;
   // }
+  @media screen and (max-width: 769px) {
+    width: 100%;
+    max-width: 420px;
+    padding: 50px 8px;
+  }
 }
 
 .modal-body {

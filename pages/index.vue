@@ -7,8 +7,8 @@
     <rules-section />
     <div class="container">
       <flex-section />
-      <cards-section />
     </div>
+    <cards-section />
     <banner-section />
     <footer-section />
   </div>

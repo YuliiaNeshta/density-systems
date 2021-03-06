@@ -12,8 +12,8 @@ body {
   color: #000000;
 }
 
-a{
-	text-decoration: none;
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -23,25 +23,42 @@ a{
   padding: 0px 10px;
 }
 
-.btn{
-	min-width: 202px;
-	padding: 13px 10px;
-	font-size: 16px;
-	line-height: 19px;
-	border-radius: 25px;
-	border: none;
-	outline: none;
-	cursor: pointer;
+.btn {
+  min-width: 202px;
+  padding: 13px 10px;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .orange-symbol {
-	color: #f3a98b;
+  color: #f3a98b;
 }
 
-.title{
-	font-weight: 900;
-	font-size: 36px;
-	line-height: 42px;
-	text-align: center;
-	color: #5056E4;
+.title {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: #5056E4;
+
+  @media screen and (max-width: 475px) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

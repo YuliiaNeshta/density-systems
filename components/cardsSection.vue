@@ -24,7 +24,7 @@
           </div>
           <div class="card card--margin">
             <div class="card__image">
-              <img src="@/assets/images/plan-1.svg" alt="" />
+              <img src="@/assets/images/plan-2-2.png" alt="" />
             </div>
             <p class="card__title">Коробочная лицензия</p>
             <p class="card__text">
@@ -51,6 +51,14 @@ export default {}
 .plans {
   padding-top: 250px;
   padding-bottom: 180px;
+  @media screen and (max-width: 769px) {
+    padding-bottom: 120px;
+    padding-top: 120px;
+  }
+  background-image: url('~@/assets/images/wave.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
 
   &__cards {
   }
@@ -62,6 +70,9 @@ export default {}
   &__descr {
     margin-bottom: 90px;
     text-align: center;
+    @media screen and (max-width: 769px) {
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -75,8 +86,19 @@ export default {}
   justify-content: center;
   align-items: center;
   margin-right: 30px;
+  @media screen and (max-width: 769px) {
+    margin-right: 0px;
+
+    &:first-child {
+      margin-bottom: 80px;
+    }
+    padding: 15px 10px 60px 10px;
+  }
   &--margin {
     transform: translateY(40px);
+    @media screen and (max-width: 769px) {
+      transform: translateY(0px);
+    }
   }
   &__image {
     margin-bottom: 30px;
@@ -92,11 +114,18 @@ export default {}
   &__text {
     text-align: center;
     margin-bottom: 30px;
+    @media screen and (max-width: 769px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 769px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__price {
